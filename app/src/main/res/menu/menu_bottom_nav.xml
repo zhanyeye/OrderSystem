@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/foodFragment"
+        android:title="Food"
+        android:icon="@drawable/food_u" />
+    <item android:id="@id/orderFragment"
+        android:title="Hotel"
+        android:icon="@drawable/hotel_u" />
+    <item android:id="@id/mineFragment"
+        android:title="Map"
+        android:icon="@drawable/ic_loc_in_map_u" />
+    <item android:id="@+id/menu_bottom_list"
+        android:title="List"
+        android:icon="@drawable/main_index_my_pressed" />
+</menu>

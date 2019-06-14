@@ -16,6 +16,10 @@ buildscript {
 
 allprojects {
     repositories {
+        // 添加阿里镜像
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
         google()
         jcenter()
         
