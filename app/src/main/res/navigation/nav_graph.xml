@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/orderFragment">
+    app:startDestination="@id/seatFragment">
 
     <fragment
         android:id="@+id/seatFragment"
@@ -15,11 +15,6 @@
         android:name="com.example.ordersystem.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order" />
-    <fragment
-        android:id="@+id/mineFragment"
-        android:name="com.example.ordersystem.MineFragment"
-        android:label="fragment_mine"
-        tools:layout="@layout/fragment_mine" />
     <fragment
         android:id="@+id/foodFragment"
         android:name="com.example.ordersystem.FoodFragment"

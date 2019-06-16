@@ -56,11 +56,11 @@ public class FoodFragment extends Fragment {
 
     private List<Food> listFood() {
         Food f1 = new Food(1, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
-        Food f2 = new Food(2, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
-        Food f3 = new Food(3, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
-        Food f4 = new Food(4, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
-        Food f5 = new Food(5, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
-        Food f6 = new Food(6, "山芋圆子", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
+        Food f2 = new Food(2, "红烧肉", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 30);
+        Food f3 = new Food(3, "炒面", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 8);
+        Food f4 = new Food(4, "牛肉拉面", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 10);
+        Food f5 = new Food(5, "大盘鸡", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 25);
+        Food f6 = new Food(6, "番茄鸡蛋汤", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 15);
         List<Food> foods = new ArrayList<>();
         foods.add(f1);foods.add(f2);foods.add(f3);foods.add(f4);foods.add(f5);foods.add(f6);
         return foods;

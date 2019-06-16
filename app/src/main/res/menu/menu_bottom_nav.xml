@@ -12,7 +12,4 @@
         android:title="Order"
         android:icon="@drawable/order_u" />
 
-    <item android:id="@+id/mineFragment"
-        android:title="Me"
-        android:icon="@drawable/me_u" />
 </menu>
