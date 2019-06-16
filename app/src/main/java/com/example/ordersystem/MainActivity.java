@@ -18,12 +18,17 @@ public class MainActivity extends AppCompatActivity implements NavController.OnD
 
     private NavController navController;
     private BottomNavigationView bottomNavigationView;
+    public static MainActivity instance = null;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        instance = this;
+
         bottomNavigationView = findViewById(R.id.bottom_nav);
         navController = Navigation.findNavController(this, R.id.my_nav_host_fragment);
         navController.addOnDestinationChangedListener(this);

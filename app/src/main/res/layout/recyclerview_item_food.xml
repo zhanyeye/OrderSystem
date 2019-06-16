@@ -1,44 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="?android:attr/selectableItemBackground"
-    android:clickable="true"
-    android:focusable="true">
+    android:layout_height="320dp">
 
     <ImageView
-        android:id="@+id/news_pic"
-        android:layout_width="0dp"
+        android:id="@+id/rec_food_img"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food" />
+
+    <TextView
+        android:id="@+id/rec_food_name"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="72dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        android:scaleType="fitCenter"
-        android:src="@mipmap/ic_launcher" />
-
-    <LinearLayout
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/rec_food_buy"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="下单"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/news_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="TextView"
-            android:textColor="#CC0033"
-            android:textSize="36sp" />
+    <TextView
+        android:id="@+id/rec_food_price"
+        android:layout_width="75dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="72dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/news_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView"
-            android:textColor="#3399FF"
-            android:textSize="24sp" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/rec_food_detail"
+        android:layout_width="212dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rec_food_name" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
