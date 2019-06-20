@@ -7,11 +7,16 @@ public class Food {
     public String detail;
     public double price;
 
-    public Food(int id, String name, String detail, double price) {
-        this.id = id;
+    public Food(String name, double price) {
         this.name = name;
-        this.detail = detail;
         this.price = price;
     }
+
+    public Food(int id, String name, String detail, double price) {
+            this.id = id;
+            this.name = name;
+            this.detail = detail;
+            this.price = price;
+        }
 
 }

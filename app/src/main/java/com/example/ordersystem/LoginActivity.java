@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                     intent.putExtra("username", username);
                     startActivity(intent);
 
-                } else if (username.equals("0002") && password.equals("0002")) {
+                } else if (username.equals("0000") && password.equals("0000")) {
                     Toast.makeText(that, "服务员登录", Toast.LENGTH_SHORT).show();
                     Intent intent= new Intent(that, MainActivity.class);
                     intent.putExtra("username", username);

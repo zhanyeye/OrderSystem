@@ -10,11 +10,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ordersystem.adapter.OrderAdapter;
+import com.example.ordersystem.entity.Data;
 import com.example.ordersystem.entity.Food;
 import com.example.ordersystem.entity.Order;
 
@@ -28,7 +30,8 @@ import java.util.List;
 public class OrderFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private OrderAdapter orderAdapter;
+    private static OrderAdapter orderAdapter;
+    private static List<Order> orderList = listOrder();
 
     public OrderFragment() {
         // Required empty public constructor
@@ -49,11 +52,19 @@ public class OrderFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager); // 指定一个默认的布局管理器
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));// 指定item分割线
-        OrderAdapter orderAdapter = new OrderAdapter(listOrder());
+
+        orderAdapter = new OrderAdapter(orderList);
         recyclerView.setAdapter(orderAdapter);
     }
 
-    private List<Order> listOrder() {
+    public static void refresh() {
+        orderList.add(Data.order);
+        orderAdapter.notifyDataSetChanged();
+        Log.i("why","???");
+
+    }
+
+    private static List<Order> listOrder() {
         List<Food> foods = new ArrayList<>();
         Food f1 = new Food(1, "山芋圆子    ", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 20);
         Food f2 = new Food(2, "红烧肉        ", "非常好吃 非常好吃\n非常好吃 非常好吃\n", 30);

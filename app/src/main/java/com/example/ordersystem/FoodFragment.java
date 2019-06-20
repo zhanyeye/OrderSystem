@@ -1,6 +1,7 @@
 package com.example.ordersystem;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,9 +15,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.ordersystem.adapter.FoodAdapter;
+import com.example.ordersystem.entity.Data;
 import com.example.ordersystem.entity.Food;
+import com.example.ordersystem.util.MyApplication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +34,7 @@ public class FoodFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private FoodAdapter foodAdapter;
+    private Button button;
 
     public FoodFragment() {
         // Required empty public constructor
@@ -52,6 +58,17 @@ public class FoodFragment extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));// 指定item分割线
         foodAdapter = new FoodAdapter(listFood());
         recyclerView.setAdapter(foodAdapter);
+        button = view.findViewById(R.id.frag_food_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Data.checkOut();
+                Toast.makeText(MyApplication.getInstance(), "总价：" + Data.order.totalPrice, Toast.LENGTH_SHORT).show();
+
+                Intent intent  = new Intent(getActivity(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private List<Food> listFood() {

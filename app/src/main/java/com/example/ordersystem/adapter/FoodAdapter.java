@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ordersystem.MainActivity;
 import com.example.ordersystem.R;
+import com.example.ordersystem.entity.Data;
 import com.example.ordersystem.entity.Food;
 import com.example.ordersystem.util.MyApplication;
 
@@ -39,7 +40,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         holder.name.setText(foodlist.get(position).name);
         holder.detail.setText(foodlist.get(position).detail);
         holder.price.setText("价格：" + foodlist.get(position).price + "");
@@ -54,7 +55,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.MyViewHolder> 
                 dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MyApplication.getInstance(), "已选中", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MyApplication.getInstance(), foodlist.get(position).price + "元", Toast.LENGTH_SHORT).show();
+                        Data.addFood(foodlist.get(position).name, foodlist.get(position).price);
+
                     }
                 });
                 // 取消回调
