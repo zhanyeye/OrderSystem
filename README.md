@@ -2,6 +2,12 @@
 
 Android课设
 
+###### 知识点
++ RecyclerView
++ Fragment & Navigation
++ DrawerLayout & NavigationView
++ Intent
+
 ###### 说明
 
 服务员登录账号：0000 ; 密码: 0000
