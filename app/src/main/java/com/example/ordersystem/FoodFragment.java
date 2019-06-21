@@ -62,11 +62,15 @@ public class FoodFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Data.checkOut();
-                Toast.makeText(MyApplication.getInstance(), "总价：" + Data.order.totalPrice, Toast.LENGTH_SHORT).show();
 
-                Intent intent  = new Intent(getActivity(), CheckOutActivity.class);
-                startActivity(intent);
+                if (Data.foodList.size() != 0) {
+                    Data.checkOut();
+                    Toast.makeText(MyApplication.getInstance(), "总价：" + Data.order.totalPrice, Toast.LENGTH_SHORT).show();
+                    Intent intent  = new Intent(getActivity(), CheckOutActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MyApplication.getInstance(), "您还没有点餐", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

@@ -50,8 +50,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.instance); //更具MainActivity.instance 拿到 MainActivity 的上下文
-                dialog.setTitle("结账");
-                dialog.setMessage("是否结账");
+                dialog.setTitle("催菜");
+                dialog.setMessage("是否催菜");
 
                 // 确认按钮回调
                 dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
