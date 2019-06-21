@@ -57,12 +57,13 @@ public class OrderFragment extends Fragment {
         recyclerView.setAdapter(orderAdapter);
     }
 
-    public static void refresh() {
-        orderList.add(Data.order);
-        orderAdapter.notifyDataSetChanged();
-        Log.i("why","???");
-
-    }
+//    public static void refresh() {
+//        orderList.add(new Order());
+//        Log.i("why","???");
+//        orderAdapter.notifyDataSetChanged();
+//        Log.i("why","!!!");
+//
+//    }
 
     private static List<Order> listOrder() {
         List<Food> foods = new ArrayList<>();

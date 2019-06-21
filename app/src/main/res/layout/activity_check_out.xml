@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/act_checkout_name"
         android:layout_width="103dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="76dp"
 
@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/act_checkout_price"
         android:layout_width="98dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
 
         app:layout_constraintStart_toEndOf="@+id/act_checkout_name"
