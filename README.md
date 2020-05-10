@@ -28,7 +28,7 @@ Android课设
 
 <img align="left" width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190621105758.png"/> <img align="center" width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190621105853.png"/> 
 
-<img align="left"  width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190621110037.png"/><img align="center" width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190621105925.png"/>
+<img align="center" width="200" height="auto" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/img/img/20190621105925.png"/>
 
 
 
